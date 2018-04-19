@@ -10,4 +10,4 @@ Runs a command on webhook from github.
 
 ## Docker
 
-  docker run --rm -it -e SECRET=somereallyobscuresecretthatnobodywillguess -e COMMAND=git -e ARGUMENTS=pull -e COMMANDPATH=/home/project -v ${PWD}:/home/project -v ~/.ssh/:/root/.ssh/ -p 80:80 oisann/commandonhook:latest
+`docker run --rm -it -e SECRET=somereallyobscuresecretthatnobodywillguess -e COMMAND=git -e ARGUMENTS=pull -e COMMANDPATH=/home/project -v ${PWD}:/home/project -v ~/.ssh/:/root/.ssh/ -p 80:80 oisann/commandonhook:latest`
