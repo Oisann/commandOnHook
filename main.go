@@ -53,7 +53,11 @@ func exeCmd(cmd string, args string, dir string) {
 }
 
 func main() {
-	http.HandleFunc("/", serveWebhook)
+	// Normal webhook needs a security check
+	//http.HandleFunc("/", serveWebhook)
+	//http.HandleFunc("/github", serveGithubWebhook)
+	
+	http.HandleFunc("/", serveGithubWebhook)
 	http.HandleFunc("/github", serveGithubWebhook)
 	log.Fatal(http.ListenAndServe(":80", nil))
 }
